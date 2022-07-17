@@ -430,7 +430,7 @@
                 </svg>
             </button>
             <h2 class="modal-title">Залиште свої дані, ми вам передзвонимо</h2>
-            <form class="form">
+            <form class="form" autocomplete="off">
                 <div class="form-field">
                     <label for="name" class="form-label">Ім'я</label>
                     <div class="form-div">
@@ -438,6 +438,7 @@
                             type="text" 
                             class="form-input" 
                             name="name" 
+                            id="name"
                             placeholder="">
                         <svg class="modal-svg" width="12px" height="12px">
                             <use href="./images/icons.svg#modal-name"></use>
@@ -451,6 +452,7 @@
                             type="tel" 
                             class="form-input" 
                             name="tel" 
+                            id="tel"
                             placeholder="">
                         <svg class="modal-svg" width="14px" height="14px">
                             <use href="./images/icons.svg#modal-tel"></use>
@@ -461,9 +463,10 @@
                     <label for="mail" class="form-label">Пошта</label>
                     <div class="form-div">
                         <input 
-                            type="mail" 
+                            type="email" 
                             class="form-input" 
                             name="mail" 
+                            id="mail"
                             placeholder="">
                         <svg class="modal-svg" width="16px" height="12px">
                             <use href="./images/icons.svg#modal-mail"></use>
@@ -479,7 +482,19 @@
                         class="form-comment" 
                         placeholder="Введіть текст"></textarea>
                 </div>
-
+                
+                <label class="terms">
+                    <input class="checkbox" type="checkbox" name="terms" value="terms">
+                    <svg class="nochecked-icon" width="16px" height="15px">
+                        <use href="./images/icons.svg#no-checked"></use>
+                    </svg>
+                    <svg class="checked-icon" width="16px" height="15px">
+                        <use href="./images/icons.svg#checked"></use>
+                    </svg>
+                    <span>Погоджуюся з розсилкою та приймаю</span>  
+                </label>
+                <a class="contract-terms" href="">Умови договору</a>
+                 
                 <div class="div-for-button">
                     <button type="submit" class="modal-send-button">Відправити</button>
                 </div>
